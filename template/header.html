@@ -122,7 +122,7 @@
     <div class="row">
         <!-- Card 1 -->
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-4 p-3" >
-            <div class="card background_color border-secondary p-2" style="width: 100%; height: 550px;">
+            <div class="card background_color border-secondary p-2" style="width: 100%; height: 500px;">
                 <img src="{% static 'image/logo.PNG' %}" height="250px" width="100%" class="card-img-top image_style" alt="...">
                 <div class="card-body ">
                     <h5 class="card-title text_color pb-2"><b>digital marketing</b></h5>
@@ -132,7 +132,7 @@
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-4 p-3" >
-          <div class="card background_color border-secondary p-2" style="width: 100%; height: 550px;">
+          <div class="card background_color border-secondary p-2" style="width: 100%; height: 500px;">
               <img src="{% static 'image/wedding.jpg' %}" height="250px" width="100%" class="card-img-top image_style" alt="...">
               <div class="card-body ">
                   <h5 class="card-title text_color pb-2"><b>Wedding work</b></h5>
@@ -142,7 +142,7 @@
           </div>
       </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-4 p-3">
-        <div class="card background_color border-secondary p-3" style="width: 100%; height: 550px;">
+        <div class="card background_color border-secondary p-3" style="width: 100%; height: 500px;">
             <img src="{% static 'image/events.jpg' %}" height="250px" width="100%" class="card-img-top image_style" alt="...">
             <div class="card-body">
                 <h5 class="card-title text_color pb-2"><b>Events</b></h5>
@@ -157,7 +157,7 @@
 <center>
   <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3 cursor_bar">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="3000" > <!-- Set the interval in milliseconds -->
-      <div class="carousel-indicators" style="height: 200px; width: 100%;">
+      <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -165,13 +165,13 @@
 
       <div class="carousel-inner " >
         <div class="carousel-item active">
-          <img src="{% static 'image/image1.JPG' %}" class="d-block w-100 h-100" alt="...">
+          <img src="{% static 'image/image1.JPG' %}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'image/image2.JPG' %}" class="d-block w-100 h-100" alt="...">
+          <img src="{% static 'image/image2.JPG' %}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'image/image3.jpeg' %}" class="d-block w-100 h-100" alt="...">
+          <img src="{% static 'image/image3.jpeg' %}" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -260,13 +260,12 @@
 <script>
 
 function submiting() {
- 
+  document.querySelector(".phonenumber_error").innerHTML = "";
+    document.querySelector(".phonenumber_error").style.display = "block";
 const numberInput = parseInt(document.getElementById('phonenumber').value);
 const name = document.getElementById('name').value;
 const email = document.getElementById('email').value;
 const message = document.getElementById('message').value;
-document.querySelector(".phonenumber_error").innerHTML = "";
-document.querySelector(".phonenumber_error").style.display = "block";
 
 
 if (numberInput.toString().length != 10 || !/^\d+$/.test(numberInput) || name == "" || email == "" || message == "") {
