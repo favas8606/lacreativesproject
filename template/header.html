@@ -260,12 +260,13 @@
 <script>
 
 function submiting() {
-  document.querySelector(".phonenumber_error").innerHTML = "";
-    document.querySelector(".phonenumber_error").style.display = "block";
+ 
 const numberInput = parseInt(document.getElementById('phonenumber').value);
 const name = document.getElementById('name').value;
 const email = document.getElementById('email').value;
 const message = document.getElementById('message').value;
+document.querySelector(".phonenumber_error").innerHTML = "";
+document.querySelector(".phonenumber_error").style.display = "block";
 
 
 if (numberInput.toString().length != 10 || !/^\d+$/.test(numberInput) || name == "" || email == "" || message == "") {
