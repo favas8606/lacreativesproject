@@ -41,7 +41,7 @@
   <div class="row">
     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 " style="display: flex; align-items: center;justify-content: center;">
       <center>
-        <img src="{% static 'image/logo.PNG' %}" width="350px" height="350px">
+        <img src="{% static 'image/logo.png' %}" width="350px" height="350px">
 
       </center>
 
@@ -123,7 +123,7 @@
         <!-- Card 1 -->
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-4 p-3" >
             <div class="card background_color border-secondary p-2" style="width: 100%; height: 500px;">
-                <img src="{% static 'image/logo.PNG' %}" height="250px" width="100%" class="card-img-top image_style" alt="...">
+                <img src="{% static 'image/logo.' %}" height="250px" width="100%" class="card-img-top image_style" alt="...">
                 <div class="card-body ">
                     <h5 class="card-title text_color pb-2"><b>digital marketing</b></h5>
                     <p class="card-text text_color_card">Maximize your online presence with our expert digital marketing services. We specialize in SEO, Website, Social Media, Content Creation.</p>
@@ -260,13 +260,15 @@
 <script>
 
 function submiting() {
+  document.querySelector(".phonenumber_error").innerHTML = "";
+    document.querySelector(".phonenumber_error").style.display = "block";
 const numberInput = parseInt(document.getElementById('phonenumber').value);
 const name = document.getElementById('name').value;
 const email = document.getElementById('email').value;
 const message = document.getElementById('message').value;
 
 
-if (numberInput.toString().length != 10 || !/^\d+$/.test(numberInput) || name == "" || email == "") {
+if (numberInput.toString().length != 10 || !/^\d+$/.test(numberInput) || name == "" || email == "" || message == "") {
   document.querySelector(".phonenumber_error").innerHTML = "Please enter a Valid details";
     document.querySelector(".phonenumber_error").style.display = "block";
     event.preventDefault();
