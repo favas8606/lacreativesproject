@@ -35,15 +35,7 @@ color: rgb(255, 255, 255);
 color: rgb(255, 255, 255);  
 
 }
-#insta {
-background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
--webkit-background-clip: text;
-  /* Also define standard property for compatibility */
-  background-clip: text;
--webkit-text-fill-color: transparent;
 
-
-}  
 
 .text_deceration{
 font-size: 350%;
@@ -67,6 +59,7 @@ color: white;
 text-transform: uppercase;
 padding: .5rem;
 position: relative;
+font-weight: 200;
 }
 .link::before{
 content: "";
@@ -78,6 +71,7 @@ border-radius: 5px;
 transform: scaleX(0);
 transition: all 0.6s ease;
 color:rgb(110, 110, 215);
+font-weight: 200;
 
 background-color: #6f6ffd;
 
@@ -88,7 +82,7 @@ left: 0;
 
 }
 .link:hover{
-color: blue;
+color: rgb(11, 11, 208);
 }
 
 
@@ -159,26 +153,6 @@ line-height: 0.75;
 
 
 
-
-.instagram:hover  {
-background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
--webkit-background-clip: text;
-  /* Also define standard property for compatibility */
-  background-clip: text;
--webkit-text-fill-color: transparent;
-
-
-}
-
-.youtube_icon{
-color: rgb(225, 17, 17);
-}
-
-
-
-
-
-
 .youtube{   
 padding-bottom:75.25%; 
 position:relative;
@@ -186,21 +160,19 @@ display:block;
 width: 100%;
 
 
+}
 
-}
-.whatsapp_icon{
-color:rgb(28, 219, 28)
-}
 .know_us{
 font-size: 36px;
 letter-spacing: .8px;
 color: rgb(224, 217, 217);
 }
 .text_style{
-font-size: 18px;
+font-size: 16px;
 letter-spacing: 1px;
-text-align: justify;
-text-justify: inter-word;
+
+
+
 color: rgb(163, 163, 163);
 
 }
