@@ -155,42 +155,49 @@
 </div>
 <div style="height: 100px;" ></div>
 <center>
-  <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3 cursor_bar">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="3000" > <!-- Set the interval in milliseconds -->
+  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+  <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel" data-mdb-carousel-init>
+    <!-- Indicators -->
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="3000" > Set the interval in milliseconds -->
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselBasicExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselBasicExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselBasicExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-
-      <div class="carousel-inner " >
-        <div class="carousel-item active">
-          <img src="{% static 'image/image1.JPG' %}" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="{% static 'image/image2.JPG' %}" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="{% static 'image/image3.jpeg' %}" class="d-block w-100" alt="...">
-        </div>
+  
+    <!-- Inner -->
+    <div class="carousel-inner " >
+      <div class="carousel-item active">
+        <img src="{% static 'image/image1.JPG' %}" class="d-block w-100 img-fluid" alt="...">
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="carousel-item">
+        <img src="{% static 'image/image2.JPG' %}" class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'image/image3.jpeg' %}" class="d-block w-100 img-fluid" alt="...">
+      </div>
     </div>
+    <!-- Inner -->
+  
+    <!-- Controls -->
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselBasicExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBasicExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
   </div>
+  <!-- Carousel wrapper -->
+</div>
 </center>
 <div style="height: 100px;" ></div>
 
 
 
 
-   <div class="container form_style">
+   <div class="container-fluid form_style">
     
     <form action="" method="post">
       {% csrf_token %}
@@ -245,7 +252,9 @@
    <div style="height: 50px; width: 100%;"></div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <img src="{% static 'image/works.jpeg' %}" width="100%" height="300rem" alt="">
-      </div>
+      <!-- Carousel wrapper -->
+
+   
    
   </center>
       
@@ -281,6 +290,10 @@ else {
     
    
 }
+// Initialization for ES Users
+
+
+initMDB({ Carousel });
 
 } 
 </script>
