@@ -358,4 +358,12 @@
         padding: 0;
     }
     
- 
+.client_name{
+    color: white;
+    letter-spacing: 2px;
+    padding-top: 10px;
+}
+
+html .sr .container-fluid{
+    visibility: hidden;
+}
