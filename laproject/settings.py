@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-gp30e@1+8^)lwas7h$uce29m4hdnp@lwf9i%8-d)o_l$53(@6w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["lacreative-096e15ca75a0.herokuapp.com", "www.lacreatives.in", "lacreatives.in"]
+ALLOWED_HOSTS = ["lacreatives-53766be6cd0b.herokuapp.com", "www.lacreatives.in", "lacreatives.in"]
 
 
 # Application definition
@@ -136,7 +136,9 @@ django_heroku.settings(locals())
 
 
 
-# if os.getcwd() == '/app':
-#     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARD_PROTO','https')
-#     SECURE_SSL_REDIRECT = True
-#     DEBUG = False
+
+if os.getcwd() == '/app':
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARD_PROTO','https')
+    SECURE_SSL_REDIRECT = True
+    DEBUG = False
+
